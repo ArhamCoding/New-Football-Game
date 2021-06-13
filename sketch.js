@@ -60,9 +60,9 @@ function setup(){
 function draw(){
   background ("green");
   edges = createEdgeSprites();
-  textSize(30);
+  textSize(20);
   fill("white");
-  text ("GOALS SAVED: "+score, 80, 50);
+  text ("GOALS SAVED: "+score, displayWidth/2+200, 50);
 
   if (ball.isTouching (edges[2])) {
     ball.bounceOff(edges[2]);
@@ -84,14 +84,15 @@ function draw(){
     gameState = "play";
     footballer.changeAnimation ("kicking", kickingfootballer_img);
     footballer.scale = 0.8
-    footballer.x = 590
+    footballer.x = displayWidth/2+100
     ball.velocityX = Math.round(random (-6, +4))
     ball.velocityY = Math.round(random (-8, -13))
     touches = [];
   }
   if (score === 5) {
-    text ("Good job! You completed the game!", 300, 400);
-    text ("Press 'R' to restart the game", 350, 450)
+    clear();
+    text ("Good job! You completed the game!", displayWidth/2, displayHeight/2);
+    text ("Press 'R' to restart the game", displayWidth/2, displayHeight/2+50)
     gameState = "end";
   }
 
