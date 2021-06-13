@@ -90,9 +90,9 @@ function draw(){
     touches = [];
   }
   if (score === 5) {
-    clear();
-    text ("Good job! You completed the game!", displayWidth/2, displayHeight/2);
-    text ("Press 'R' to restart the game", displayWidth/2, displayHeight/2+50)
+    
+    text ("Good job! You completed the game!", displayWidth/2-100, displayHeight/2+100);
+    text ("Press 'R' to restart the game", displayWidth/2-100, displayHeight/2+150)
     gameState = "end";
   }
 
