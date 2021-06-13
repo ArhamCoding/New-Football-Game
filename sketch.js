@@ -91,8 +91,8 @@ function draw(){
   }
   if (score === 5) {
     fill ("black");
-    text ("Good job! You completed the game!", displayWidth/2-100, displayHeight/2+100);
-    text ("Press 'R' to restart the game", displayWidth/2-100, displayHeight/2+150)
+    text ("Good job! You completed the game!", displayWidth/2-100, 200);
+    text ("Press 'R' to restart the game", displayWidth/2-100, 250)
     gameState = "end";
   }
 
